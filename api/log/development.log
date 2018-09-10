@@ -1,0 +1,1765 @@
+  [1m[35m (322.5ms)[0m  [1m[35mCREATE DATABASE "sound_and_fury_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (363.1ms)[0m  [1m[35mCREATE DATABASE "sound_and_fury_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSounds (20180910163125)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "name" character varying, "audio_file" character varying, "icon_image" character varying, "initial_color_value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180910163125_create_sounds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180910163125"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-10 16:40:06.799088"], ["updated_at", "2018-09-10 16:40:06.799088"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Create (2.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "fire"], ["created_at", "2018-09-10 16:42:09.088960"], ["updated_at", "2018-09-10 16:42:09.088960"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:45:26 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.47ms)
+Completed 200 OK in 61ms (Views: 45.6ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-10 12:45:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:45:30 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (0.73ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Create (0.9ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "water"], ["created_at", "2018-09-10 16:46:13.438550"], ["updated_at", "2018-09-10 16:46:13.438550"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "forest"], ["created_at", "2018-09-10 16:46:22.247538"], ["updated_at", "2018-09-10 16:46:22.247538"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "voice"], ["created_at", "2018-09-10 16:46:47.270016"], ["updated_at", "2018-09-10 16:46:47.270016"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/stories" for 127.0.0.1 at 2018-09-10 12:48:57 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/stories"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/sounds" for 127.0.0.1 at 2018-09-10 12:49:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sounds"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/ap1/v1/sounds" for 127.0.0.1 at 2018-09-10 12:49:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ap1/v1/sounds"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/ap1/v1/sounds" for 127.0.0.1 at 2018-09-10 12:49:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ap1/v1/sounds"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:49:33 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.31ms)
+Completed 200 OK in 51ms (Views: 37.2ms | ActiveRecord: 11.2ms)
+
+
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:55:52 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.49ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:55:56 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.12ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:56:09 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.66ms)
+Completed 200 OK in 43ms (Views: 32.0ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:56:11 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (0.75ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:56:37 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.43ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 12:56:42 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.52ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "fire"], ["initial_color_value", "51,0,0"], ["created_at", "2018-09-10 17:32:09.524362"], ["updated_at", "2018-09-10 17:32:09.524362"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ocean"], ["initial_color_value", "0,51,51"], ["created_at", "2018-09-10 17:32:09.529421"], ["updated_at", "2018-09-10 17:32:09.529421"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "forest"], ["initial_color_value", "0,51,0"], ["created_at", "2018-09-10 17:32:09.532870"], ["updated_at", "2018-09-10 17:32:09.532870"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "voice"], ["initial_color_value", "64,64,64"], ["created_at", "2018-09-10 17:32:09.536897"], ["updated_at", "2018-09-10 17:32:09.536897"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "river"], ["initial_color_value", "0,51,102"], ["created_at", "2018-09-10 17:32:09.541343"], ["updated_at", "2018-09-10 17:32:09.541343"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rain"], ["initial_color_value", "192,192,192"], ["created_at", "2018-09-10 17:32:09.544069"], ["updated_at", "2018-09-10 17:32:09.544069"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:33:20 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (2.18ms)
+Completed 200 OK in 46ms (Views: 33.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:34:32 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (2.39ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:35:49 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (2.47ms)
+Completed 200 OK in 40ms (Views: 28.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:35:50 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (2.46ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:36:42 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (2.12ms)
+Completed 200 OK in 43ms (Views: 29.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:36:45 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (1.91ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:36:47 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (2.08ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:37:48 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+No serializer found for resource: #<Sound id: 1, name: "fire", audio_file: nil, icon_image: nil, initial_color_value: nil, created_at: "2018-09-10 16:42:09", updated_at: "2018-09-10 16:42:09">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sound::ActiveRecord_Relation (2.7ms)
+Completed 200 OK in 47ms (Views: 32.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:41:48 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.61ms)
+Completed 200 OK in 60ms (Views: 46.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:43:05 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.12ms)
+Completed 200 OK in 32ms (Views: 17.3ms | ActiveRecord: 12.7ms)
+
+
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" ORDER BY "sounds"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.7ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:43:41 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.88ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" ORDER BY "sounds"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" ORDER BY "sounds"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (1.0ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (1.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 9]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:44:02 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "fire"], ["initial_color_value", "51,0,0"], ["created_at", "2018-09-10 17:44:23.763074"], ["updated_at", "2018-09-10 17:44:23.763074"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ocean"], ["initial_color_value", "0,51,51"], ["created_at", "2018-09-10 17:44:23.767229"], ["updated_at", "2018-09-10 17:44:23.767229"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "forest"], ["initial_color_value", "0,51,0"], ["created_at", "2018-09-10 17:44:23.771005"], ["updated_at", "2018-09-10 17:44:23.771005"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "voice"], ["initial_color_value", "64,64,64"], ["created_at", "2018-09-10 17:44:23.774770"], ["updated_at", "2018-09-10 17:44:23.774770"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "river"], ["initial_color_value", "0,51,102"], ["created_at", "2018-09-10 17:44:23.778765"], ["updated_at", "2018-09-10 17:44:23.778765"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rain"], ["initial_color_value", "192,192,192"], ["created_at", "2018-09-10 17:44:23.782405"], ["updated_at", "2018-09-10 17:44:23.782405"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:44:39 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 42ms (Views: 25.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:45:51 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 38ms (Views: 20.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:47:12 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:47:34 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.01ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:58:57 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 200 OK in 62ms (Views: 47.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:59:13 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.97ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:59:41 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 13:59:52 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.09ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:00:16 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:00:17 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:00:18 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.28ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:00:19 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.85ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:00:22 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.87ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:00:31 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:00:55 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.78ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:01:01 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.34ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:25:12 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:29:38 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (18.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.83ms)
+Completed 200 OK in 25ms (Views: 5.3ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:32:07 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.28ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:32:09 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:32:11 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.53ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:32:13 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.35ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:32:14 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.19ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:34:33 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.17ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:34:50 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.69ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:34:51 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.47ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:34:52 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.1ms)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:34:53 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.45ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:35:28 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.09ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:41:00 -0400
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:56:10 -0400
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.28ms)
+Completed 200 OK in 59ms (Views: 35.6ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 14:57:07 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.29ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:19:55 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.18ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:20:08 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.4ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:26:35 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.28ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:29:31 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:29:54 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.15ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:30:44 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:35:10 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.95ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:37:11 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.75ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:37:59 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.19ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:41:03 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.52ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:44:54 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.01ms)
+Completed 200 OK in 41ms (Views: 33.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:57:35 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.54ms)
+Completed 200 OK in 77ms (Views: 66.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:57:59 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.7ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:58:10 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.7ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:58:34 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.26ms)
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:58:47 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.95ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:59:05 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.95ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 15:59:26 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.88ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:00:53 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.22ms)
+Completed 200 OK in 48ms (Views: 42.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:01:12 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.56ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:02:11 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.02ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:02:21 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.51ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:16:33 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.97ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:16:48 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.92ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:23:38 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:26:30 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.25ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:27:44 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.04ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:29:17 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.91ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:31:10 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.04ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:31:23 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.37ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:31:33 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.2ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:31:44 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.61ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:35:09 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.13ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:37:29 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (8.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.79ms)
+Completed 200 OK in 18ms (Views: 9.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:38:24 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.67ms)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:38:26 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.9ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:38:28 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.67ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:38:32 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.66ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:39:19 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.13ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:41:46 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:43:09 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:44:15 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.39ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:44:24 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.15ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:46:50 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.33ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:47:44 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.83ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:48:06 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:48:17 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.06ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:48:33 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (6.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.31ms)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:48:59 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.19ms)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:49:11 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.71ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:49:28 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.78ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:49:29 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.32ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:50:08 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.34ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:50:49 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:51:01 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.72ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:51:15 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.2ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:53:08 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.22ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:53:25 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.76ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:53:42 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (7.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.47ms)
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:53:57 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.41ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:54:05 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.49ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:54:23 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.63ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:54:30 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.19ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:54:42 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.53ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:54:42 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:54:51 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.38ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:55:00 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.23ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:55:27 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.3ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:55:36 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.83ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:55:45 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.35ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:56:51 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (5.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.36ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:57:02 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.55ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:57:19 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.15ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:57:48 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.04ms)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:58:05 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (7.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.85ms)
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:58:15 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.36ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:58:22 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.66ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 16:58:45 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (4.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.48ms)
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:01:20 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.34ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:01:26 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.59ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:01:33 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:02:19 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.21ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:02:23 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.41ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:02:24 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.81ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:05:18 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.66ms)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:05:19 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.11ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:28:09 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.42ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:28:11 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.5ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:29:55 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.94ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:29:56 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.97ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:29:57 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:30:17 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (6.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:30:18 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.3ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:30:22 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.52ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:30:33 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (6.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.33ms)
+Completed 200 OK in 11ms (Views: 4.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:30:43 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (13.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.12ms)
+Completed 200 OK in 20ms (Views: 5.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:31:25 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.18ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:31:29 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.22ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:34:32 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.85ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:34:36 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:35:05 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.09ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:35:43 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.06ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:36:07 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.61ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:36:37 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.84ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:36:53 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:37:07 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.29ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:37:24 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.49ms)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:37:39 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.52ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:37:48 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.13ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:38:13 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (5.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.58ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:38:18 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.41ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:38:37 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.53ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:38:42 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:38:47 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.45ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:38:50 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.7ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:38:55 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:45:01 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.64ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:45:17 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:45:28 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.75ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:45:59 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.49ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:46:29 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:47:03 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.58ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:47:16 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.35ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:49:55 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.16ms)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:50:38 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (5.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.89ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:51:38 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.8ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-10 17:51:49 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.6ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms)
+
+
