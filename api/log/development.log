@@ -1763,3 +1763,1244 @@ Processing by Api::V1::SoundsController#index as */*
 Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 09:22:18 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.45ms)
+Completed 200 OK in 52ms (Views: 37.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 09:23:01 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (3.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.31ms)
+Completed 200 OK in 13ms (Views: 5.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 09:26:01 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 09:26:07 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.59ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 09:26:33 -0400
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.41ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 10:04:26 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.83ms)
+Completed 200 OK in 154ms (Views: 134.5ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 10:40:09 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as */*
+  [1m[36mSound Load (2.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 58ms (Views: 35.2ms | ActiveRecord: 8.6ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateVibes (20180911145045)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (36.0ms)[0m  [1m[35mCREATE TABLE "vibes" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180911145045_create_vibes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180911145045"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSoundVibes (20180911145243)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSoundVibes (20180911145243)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "sound_vibes" ("id" bigserial primary key, "sound_id" integer, "vibe_id" integer, "volume" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180911145243_create_sound_vibes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180911145243"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 10:57:51 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.08ms)
+Completed 200 OK in 48ms (Views: 31.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/v1/sound_vibe" for 127.0.0.1 at 2018-09-11 10:58:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/sound_vibe"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sound" for 127.0.0.1 at 2018-09-11 10:59:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/sound"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sound" for 127.0.0.1 at 2018-09-11 10:59:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/sound"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 10:59:11 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.21ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 11:01:34 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.91ms)
+Completed 200 OK in 40ms (Views: 23.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:01:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/vibes"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:04:08 -0400
+Processing by Api::V1::VibesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::V1::VibesController::Vibes):
+  
+app/controllers/api/v1/vibes_controller.rb:3:in `index'
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:04:49 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::VibesController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::V1::VibesController::Vibes):
+  
+app/controllers/api/v1/vibes_controller.rb:3:in `index'
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:05:06 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.7ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/soundvibes" for 127.0.0.1 at 2018-09-11 11:05:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/soundvibes"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/soundvibe" for 127.0.0.1 at 2018-09-11 11:05:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/soundvibe"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/soundvibes" for 127.0.0.1 at 2018-09-11 11:05:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/soundvibes"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sound_vibes" for 127.0.0.1 at 2018-09-11 11:05:26 -0400
+Processing by Api::V1::SoundVibesController#index as HTML
+  [1m[36mSoundVibe Load (1.6ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes"[0m
+  ↳ app/controllers/api/v1/sound_vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 16ms (Views: 5.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/v1/sound_vibes" for 127.0.0.1 at 2018-09-11 11:05:51 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/sound_vibes"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sound_vibes" for 127.0.0.1 at 2018-09-11 11:05:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/sound_vibes"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/soundvibes" for 127.0.0.1 at 2018-09-11 11:06:02 -0400
+  
+ActionController::RoutingError (uninitialized constant Api::V1::SoundvibesController):
+  
+bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
+bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
+bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sound-vibes" for 127.0.0.1 at 2018-09-11 11:06:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/sound-vibes"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sound_vibes" for 127.0.0.1 at 2018-09-11 11:06:42 -0400
+Processing by Api::V1::SoundVibesController#index as HTML
+  [1m[36mSoundVibe Load (0.9ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes"[0m
+  ↳ app/controllers/api/v1/sound_vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 6.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSoundVibes (20180911145243)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mDROP TABLE "sound_vibes"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180911145243"]]
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateVibes (20180911145045)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "vibes"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180911145045"]]
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateVibes (20180911145045)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "vibes" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180911145045_create_vibes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180911145045"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSoundVibes (20180911145243)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "sound_vibes" ("id" bigserial primary key, "sound_id" integer, "vibe_id" integer, "volume" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180911145243_create_sound_vibes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180911145243"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSound Create (2.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "fire"], ["initial_color_value", "51,0,0"], ["created_at", "2018-09-11 15:16:49.541300"], ["updated_at", "2018-09-11 15:16:49.541300"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ocean"], ["initial_color_value", "0,51,51"], ["created_at", "2018-09-11 15:16:49.547851"], ["updated_at", "2018-09-11 15:16:49.547851"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "forest"], ["initial_color_value", "0,51,0"], ["created_at", "2018-09-11 15:16:49.551477"], ["updated_at", "2018-09-11 15:16:49.551477"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "voice"], ["initial_color_value", "64,64,64"], ["created_at", "2018-09-11 15:16:49.555383"], ["updated_at", "2018-09-11 15:16:49.555383"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "river"], ["initial_color_value", "0,51,102"], ["created_at", "2018-09-11 15:16:49.560711"], ["updated_at", "2018-09-11 15:16:49.560711"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rain"], ["initial_color_value", "192,192,192"], ["created_at", "2018-09-11 15:16:49.565023"], ["updated_at", "2018-09-11 15:16:49.565023"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mVibe Create (1.8ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "chill"], ["created_at", "2018-09-11 15:16:49.585112"], ["updated_at", "2018-09-11 15:16:49.585112"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mVibe Create (0.3ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "camp"], ["created_at", "2018-09-11 15:16:49.590609"], ["updated_at", "2018-09-11 15:16:49.590609"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "rave"], ["created_at", "2018-09-11 15:16:49.595590"], ["updated_at", "2018-09-11 15:16:49.595590"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSoundVibe Create (2.4ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 17], ["vibe_id", 1], ["volume", 0.1], ["created_at", "2018-09-11 15:16:49.632750"], ["updated_at", "2018-09-11 15:16:49.632750"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "fire"], ["initial_color_value", "51,0,0"], ["created_at", "2018-09-11 15:17:13.405911"], ["updated_at", "2018-09-11 15:17:13.405911"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ocean"], ["initial_color_value", "0,51,51"], ["created_at", "2018-09-11 15:17:13.410884"], ["updated_at", "2018-09-11 15:17:13.410884"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "forest"], ["initial_color_value", "0,51,0"], ["created_at", "2018-09-11 15:17:13.415613"], ["updated_at", "2018-09-11 15:17:13.415613"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "voice"], ["initial_color_value", "64,64,64"], ["created_at", "2018-09-11 15:17:13.419527"], ["updated_at", "2018-09-11 15:17:13.419527"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "river"], ["initial_color_value", "0,51,102"], ["created_at", "2018-09-11 15:17:13.423358"], ["updated_at", "2018-09-11 15:17:13.423358"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rain"], ["initial_color_value", "192,192,192"], ["created_at", "2018-09-11 15:17:13.427547"], ["updated_at", "2018-09-11 15:17:13.427547"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mVibe Create (0.5ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "chill"], ["created_at", "2018-09-11 15:17:13.441882"], ["updated_at", "2018-09-11 15:17:13.441882"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mVibe Create (0.6ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "camp"], ["created_at", "2018-09-11 15:17:13.446463"], ["updated_at", "2018-09-11 15:17:13.446463"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mVibe Create (0.5ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "rave"], ["created_at", "2018-09-11 15:17:13.451759"], ["updated_at", "2018-09-11 15:17:13.451759"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSoundVibe Create (0.6ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 23], ["vibe_id", 4], ["volume", 0.1], ["created_at", "2018-09-11 15:17:13.499636"], ["updated_at", "2018-09-11 15:17:13.499636"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2357960868402160455)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSound Create (1.0ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "fire"], ["initial_color_value", "51,0,0"], ["created_at", "2018-09-11 15:17:23.981106"], ["updated_at", "2018-09-11 15:17:23.981106"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ocean"], ["initial_color_value", "0,51,51"], ["created_at", "2018-09-11 15:17:23.986341"], ["updated_at", "2018-09-11 15:17:23.986341"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "forest"], ["initial_color_value", "0,51,0"], ["created_at", "2018-09-11 15:17:23.990250"], ["updated_at", "2018-09-11 15:17:23.990250"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "voice"], ["initial_color_value", "64,64,64"], ["created_at", "2018-09-11 15:17:23.994267"], ["updated_at", "2018-09-11 15:17:23.994267"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "river"], ["initial_color_value", "0,51,102"], ["created_at", "2018-09-11 15:17:23.998339"], ["updated_at", "2018-09-11 15:17:23.998339"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rain"], ["initial_color_value", "192,192,192"], ["created_at", "2018-09-11 15:17:24.002718"], ["updated_at", "2018-09-11 15:17:24.002718"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mVibe Create (0.5ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "chill"], ["created_at", "2018-09-11 15:17:24.017694"], ["updated_at", "2018-09-11 15:17:24.017694"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "camp"], ["created_at", "2018-09-11 15:17:24.021608"], ["updated_at", "2018-09-11 15:17:24.021608"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "rave"], ["created_at", "2018-09-11 15:17:24.025077"], ["updated_at", "2018-09-11 15:17:24.025077"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSoundVibe Create (0.6ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 29], ["vibe_id", 7], ["volume", 0.1], ["created_at", "2018-09-11 15:17:24.055148"], ["updated_at", "2018-09-11 15:17:24.055148"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "fire"], ["initial_color_value", "51,0,0"], ["created_at", "2018-09-11 15:18:03.324363"], ["updated_at", "2018-09-11 15:18:03.324363"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ocean"], ["initial_color_value", "0,51,51"], ["created_at", "2018-09-11 15:18:03.329119"], ["updated_at", "2018-09-11 15:18:03.329119"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "forest"], ["initial_color_value", "0,51,0"], ["created_at", "2018-09-11 15:18:03.333571"], ["updated_at", "2018-09-11 15:18:03.333571"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "voice"], ["initial_color_value", "64,64,64"], ["created_at", "2018-09-11 15:18:03.337496"], ["updated_at", "2018-09-11 15:18:03.337496"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "river"], ["initial_color_value", "0,51,102"], ["created_at", "2018-09-11 15:18:03.341254"], ["updated_at", "2018-09-11 15:18:03.341254"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("name", "initial_color_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rain"], ["initial_color_value", "192,192,192"], ["created_at", "2018-09-11 15:18:03.345409"], ["updated_at", "2018-09-11 15:18:03.345409"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mVibe Create (0.6ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "chill"], ["created_at", "2018-09-11 15:18:03.364242"], ["updated_at", "2018-09-11 15:18:03.364242"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mVibe Create (0.3ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "camp"], ["created_at", "2018-09-11 15:18:03.368723"], ["updated_at", "2018-09-11 15:18:03.368723"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "vibes" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "rave"], ["created_at", "2018-09-11 15:18:03.372305"], ["updated_at", "2018-09-11 15:18:03.372305"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSoundVibe Create (0.5ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 35], ["vibe_id", 10], ["volume", 0.1], ["created_at", "2018-09-11 15:18:03.404598"], ["updated_at", "2018-09-11 15:18:03.404598"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mSoundVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 40], ["vibe_id", 10], ["volume", 0.8], ["created_at", "2018-09-11 15:18:03.412216"], ["updated_at", "2018-09-11 15:18:03.412216"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mVibe Load (0.3ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mSoundVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 36], ["vibe_id", 10], ["volume", 0.4], ["created_at", "2018-09-11 15:18:03.418869"], ["updated_at", "2018-09-11 15:18:03.418869"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mVibe Load (0.3ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mSoundVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 37], ["vibe_id", 11], ["volume", 0.1], ["created_at", "2018-09-11 15:18:03.425097"], ["updated_at", "2018-09-11 15:18:03.425097"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mSoundVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 40], ["vibe_id", 11], ["volume", 0.8], ["created_at", "2018-09-11 15:18:03.431620"], ["updated_at", "2018-09-11 15:18:03.431620"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mVibe Load (0.5ms)[0m  [1m[34mSELECT  "vibes".* FROM "vibes" WHERE "vibes"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mSoundVibe Create (0.4ms)[0m  [1m[32mINSERT INTO "sound_vibes" ("sound_id", "vibe_id", "volume", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["sound_id", 39], ["vibe_id", 11], ["volume", 0.4], ["created_at", "2018-09-11 15:18:03.439370"], ["updated_at", "2018-09-11 15:18:03.439370"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+Started GET "/api/v1/sound_vibes" for 127.0.0.1 at 2018-09-11 11:18:30 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SoundVibesController#index as HTML
+  [1m[36mSoundVibe Load (0.8ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes"[0m
+  ↳ app/controllers/api/v1/sound_vibes_controller.rb:4
+No serializer found for resource: #<SoundVibe id: 1, sound_id: 17, vibe_id: 1, volume: 0.1, created_at: "2018-09-11 15:16:49", updated_at: "2018-09-11 15:16:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with SoundVibe::ActiveRecord_Relation (1.61ms)
+Completed 200 OK in 54ms (Views: 31.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/api/v1/sound" for 127.0.0.1 at 2018-09-11 11:18:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/sound"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/sounds" for 127.0.0.1 at 2018-09-11 11:18:48 -0400
+Processing by Api::V1::SoundsController#index as HTML
+  [1m[36mSound Load (1.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/api/v1/sounds_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.88ms)
+Completed 200 OK in 71ms (Views: 45.0ms | ActiveRecord: 15.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:30:06 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.8ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.5ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.31ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 16.8ms)
+
+
+  
+SyntaxError (/Users/flatironschool/Development/code/mod3project/sound_and_fury/api/app/serializers/api/v1/sound_vibe_serializer.rb:3: syntax error, unexpected ','
+  attributes :id, sound_id:, vibe_id:, volume:
+                            ^):
+  
+app/serializers/api/v1/sound_vibe_serializer.rb:3: syntax error, unexpected ','
+app/controllers/api/v1/vibes_controller.rb:4:in `index'
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:31:01 -0400
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.9ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.7ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (48.01ms)
+Completed 200 OK in 74ms (Views: 49.5ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:31:21 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (1.7ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.5ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (62.61ms)
+Completed 200 OK in 104ms (Views: 79.7ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:32:28 -0400
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:32:38 -0400
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (1.6ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.6ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.6ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.5ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (50.17ms)
+Completed 200 OK in 80ms (Views: 50.8ms | ActiveRecord: 23.3ms)
+
+
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.9ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.7ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (58.2ms)
+Completed 200 OK in 80ms (Views: 61.6ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:34:51 -0400
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.3ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 13.8ms)
+
+
+  
+NoMethodError (undefined method `sounds' for #<Vibe:0x007fdf0bda1280>
+Did you mean?  sound_vibes):
+  
+app/controllers/api/v1/vibes_controller.rb:4:in `index'
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:35:46 -0400
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (1.8ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (48.82ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 21.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column sounds.vibe_id does not exist
+LINE 1: SELECT "sounds".* FROM "sounds" WHERE "sounds"."vibe_id" = $...
+                                              ^
+: SELECT "sounds".* FROM "sounds" WHERE "sounds"."vibe_id" = $1):
+  
+app/controllers/api/v1/vibes_controller.rb:4:in `index'
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:36:04 -0400
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.5ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.56ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 15.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column sounds.vibe_id does not exist
+LINE 1: SELECT "sounds".* FROM "sounds" WHERE "sounds"."vibe_id" = $...
+                                              ^
+: SELECT "sounds".* FROM "sounds" WHERE "sounds"."vibe_id" = $1):
+  
+app/controllers/api/v1/vibes_controller.rb:4:in `index'
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:37:23 -0400
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.4ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (136.18ms)
+Completed 200 OK in 156ms (Views: 119.6ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/api/v1/vibes" for 127.0.0.1 at 2018-09-11 11:38:51 -0400
+Processing by Api::V1::VibesController#index as HTML
+  [1m[36mVibe Load (0.4ms)[0m  [1m[34mSELECT "vibes".* FROM "vibes"[0m
+  ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.5ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.5ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.3ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (1.1ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSoundVibe Load (0.2ms)[0m  [1m[34mSELECT "sound_vibes".* FROM "sound_vibes" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers]   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "sound_vibes" ON "sounds"."id" = "sound_vibes"."sound_id" WHERE "sound_vibes"."vibe_id" = $1[0m  [["vibe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/vibes_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (138.85ms)
+Completed 200 OK in 166ms (Views: 130.3ms | ActiveRecord: 29.7ms)
+
+

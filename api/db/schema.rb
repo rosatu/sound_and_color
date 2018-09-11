@@ -10,16 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_10_163125) do
+ActiveRecord::Schema.define(version: 2018_09_11_145243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sound_vibes", force: :cascade do |t|
+    t.integer "sound_id"
+    t.integer "vibe_id"
+    t.float "volume"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "sounds", force: :cascade do |t|
     t.string "name"
     t.string "audio_file"
     t.string "icon_image"
     t.string "initial_color_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "vibes", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
