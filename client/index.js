@@ -68,18 +68,24 @@ document.getElementById('modal-button').addEventListener('click', (e) => {
   e.target.parentNode.classList.add('hidden')
 })
 
-let slider = document.createElement("div")
-slider.classList.add("slide-bar")
-slider.innerHTML=`
+let sliderContainer = document.createElement("div")
+sliderContainer.classList.add("slide-bar")
+sliderContainer.innerHTML=`
 <input type="range" min="0" max="1" value="0" step="0.10" class="slider" id="myRange">`
-slider.setAttribute("data-id", slider.id)
+sliderContainer.setAttribute("data-id", sliderContainer.id)
 
 
 let waterDiv = document.createElement("div")
 document.querySelector("body").append(waterDiv)
-waterDiv.append(waterAudio,slider)
+waterDiv.append(waterAudio, sliderContainer)
 
-document.add
+let slider = document.getElementById("myRange")
+
+slider.oninput = function(){
+  waterAudio.play()
+  waterAudio.volume = this.value
+}
+
 
 
 
