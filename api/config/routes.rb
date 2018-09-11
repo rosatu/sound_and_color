@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :sounds, only: [:index]
       resources :sound_vibes, only: [:index]
-      resources :vibes, only: [:index]
+      resources :vibes, only: [:index, :create]
 
     end
   end

@@ -6,21 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-fire = Sound.create(name: "fire", initial_color_value: "51,0,0")
-ocean = Sound.create(name: "ocean", initial_color_value: "0,51,51")
-forest = Sound.create(name: "forest", initial_color_value: "0,51,0")
-voice = Sound.create(name: "voice", initial_color_value: "64,64,64")
-river = Sound.create(name: "river", initial_color_value: "0,51,102")
-rain = Sound.create(name: "rain", initial_color_value: "192,192,192")
+Sound.delete_all
 
-vibe1 = Vibe.create(name: "chill")
-vibe2 = Vibe.create(name: "camp")
-vibe3 = Vibe.create(name: "rave")
+ocean = Sound.create(name: "ocean", audio_file:"https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg", icon_image:"./water.jpg", initial_color_value: "0,51,51")
 
-sound_vibe = SoundVibe.create(sound_id:fire.id, vibe_id: vibe1.id, volume: 0.10)
-sound_vib1 = SoundVibe.create(sound_id:rain.id, vibe_id: vibe1.id, volume: 0.80)
-sound_vib2 = SoundVibe.create(sound_id:ocean.id, vibe_id: vibe1.id, volume: 0.40)
+fireSound = Sound.create(name: "fire", audio_file: "https://actions.google.com/sounds/v1/ambiences/fire.ogg", icon_image:"./fire.jpg", initial_color_value: "51,0,0")
 
-sound_vibe = SoundVibe.create(sound_id:forest.id, vibe_id: vibe2.id, volume: 0.10)
-sound_vib1 = SoundVibe.create(sound_id:rain.id, vibe_id: vibe2.id, volume: 0.80)
-sound_vib2 = SoundVibe.create(sound_id:river.id, vibe_id: vibe2.id, volume: 0.40)
+tricklingstreamSound = Sound.create(name:"tricklingStream", audio_file:"https://actions.google.com/sounds/v1/water/small_stream_flowing.ogg", icon_image: "./tricklingstream.jpg", initial_color_value: "0,51,102")
+
+nightcrickets = Sound.create(name:"nightcrickets", audio_file:"https://actions.google.com/sounds/v1/animals/afternoon_crickets_long.ogg", icon_image: "./nightcrickets.jpg", initial_color_value: "64,64,64")
+
+thunderstormSound = Sound.create(icon_image: "./thunderstorm.jpg", audio_file: "https://actions.google.com/sounds/v1/weather/thunderstorm_long.ogg
+", name: "thunderstorm", initial_color_value: "192,192,192" )
+
+chuckleSound = Sound.create(icon_image: "./chuckle.jpg", audio_file:"https://actions.google.com/sounds/v1/human_voices/male_chuckling.ogg", name: "chuckle", initial_color_value: "250,250,210")
+
+fartSound = Sound.create(name:"fart", icon_image:"./gas.jpg", audio_file:"https://actions.google.com/sounds/v1/human_voices/human_fart.ogg", initial_color_value: "139,68,19")
