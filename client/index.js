@@ -1,100 +1,32 @@
 document.addEventListener("DOMContentLoaded",() => {
 
-  fetch('http://localhost:3000/api/v1/sounds')
-    .then( r => r.json())
-    .then(data => {
-      let sounds = data.map(sound => {
-        let soundP = document.createElement('p')
-        soundP.innerText = sound.name
-        return soundP
-      })
-      document.querySelector('body').append(...sounds)
-    })
-// //change background color every three seconds
-// setTimeout(function(){document.body.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() *255 })`}, 2000)
-
-const waterAudio = new Audio(`https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg
+let waterImage = new ImageCard("./water.jpg", `https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg
 `)
-waterAudio.loop = true;
-waterAudio.onended = function(){
-waterAudio.play();
-waterAudio.setAttribute("data-id", "water")
-}
-let fireAudio = new Audio(`https://actions.google.com/sounds/v1/ambiences/fire.ogg`)
+document.querySelector('body').append(waterImage.render())
 
-fireAudio.loop = true;
-fireAudio.onended = function(){
-fireAudio.play();
-}
+let fireImage = new ImageCard("./fire.jpg", `https://actions.google.com/sounds/v1/ambiences/fire.ogg`)
+document.querySelector('body').append(fireImage.render())
 
-let waterImage = document.createElement("img")
-waterImage.src = "./imleedh-ali-677414-unsplash.jpg"
-waterImage.width = 200
-waterImage.height = 200
-document.querySelector('body').append(waterImage)
+let tricklingstreamImage = new ImageCard("./tricklingstream.jpg", `https://actions.google.com/sounds/v1/water/small_stream_flowing.ogg`)
+document.querySelector('body').append(tricklingstreamImage.render())
 
-let fireImage = document.createElement("img")
-fireImage.src = "./connor-jalbert-306179-unsplash.jpg"
-fireImage.width = 200
-fireImage.height = 200
-document.querySelector('body').append(fireImage)
+let nightcricketsImage = new ImageCard("./nightcrickets.jpg", `https://actions.google.com/sounds/v1/animals/afternoon_crickets_long.ogg`)
+document.querySelector('body').append(nightcricketsImage.render())
 
-waterImage.addEventListener('mouseover', () => {
-  waterAudio.load()
-  waterAudio.oncanplaythrough = function(){
-    waterAudio.play();
-  }
-  // waterAudio.play()
-  document.body.style.backgroundColor = `rgba(0,51,51)`
-})
+let thunderstormImage = new ImageCard("./thunderstorm.jpg", `https://actions.google.com/sounds/v1/weather/thunderstorm_long.ogg
+`)
+document.querySelector('body').append(thunderstormImage.render())
 
-waterImage.addEventListener('mouseout', () => {
-  waterAudio.pause()
-})
-fireImage.addEventListener('mouseover', () => {
-  fireAudio.load()
-  fireAudio.oncanplaythrough = function(){
-    fireAudio.play();
-  }
-  document.body.style.backgroundImage = `rgba(51,0,0)`
-})
+let chuckleImage = new ImageCard("./chuckle.jpg", `https://actions.google.com/sounds/v1/human_voices/male_chuckling.ogg`)
+document.querySelector('body').append(chuckleImage.render())
 
-fireImage.addEventListener('mouseout', () => {
-  fireAudio.pause()
-})
+let gasImage = new ImageCard("./gas.jpg", `https://actions.google.com/sounds/v1/human_voices/human_fart.ogg`)
+document.querySelector('body').append(gasImage.render())
 
 document.getElementById('modal-button').addEventListener('click', (e) => {
   e.target.classList.add('hidden')
   e.target.parentNode.classList.add('hidden')
 })
 
-let sliderContainer = document.createElement("div")
-sliderContainer.classList.add("slide-bar")
-sliderContainer.innerHTML=`
-<input type="range" min="0" max="1" value="0" step="0.10" class="slider" id="myRange">`
-sliderContainer.setAttribute("data-id", sliderContainer.id)
-
-
-let waterDiv = document.createElement("div")
-document.querySelector("body").append(waterDiv)
-waterDiv.append(waterAudio, sliderContainer)
-
-let slider = document.getElementById("myRange")
-
-slider.oninput = function(){
-  waterAudio.play()
-  waterAudio.volume = this.value
-}
-
-
-
-
-// fireAudio.src = `https://actions.google.com/sounds/v1/ambiences/fire.ogg`
-//
-// fightAudio.src = `https://actions.google.com/sounds/v1/crowds/battle_intimidation_forest.ogg`
-//
-// vortexAudio.src = `https://actions.google.com/sounds/v1/science_fiction/sci_fi_vortex.ogg`
-//
-// waves https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg
 
 })

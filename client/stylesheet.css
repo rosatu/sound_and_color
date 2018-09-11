@@ -1,0 +1,51 @@
+body {
+  transition: 4s
+}
+
+img {
+  margin: 10px
+}
+
+.welcome-modal {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 90%;
+  padding: 50px;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+.welcome-modal p {
+  font-size: 3em;
+  color: white;
+}
+
+.welcome-modal button {
+  background: rgb(18, 140, 126);
+  border: none;
+  padding: 20px;
+  font-size: 2em;
+  font-weight: 200;
+  color: yellow;
+  transition: 0.3s
+}
+
+.welcome-modal button:hover {
+  background-color: lightgreen;
+  transform: scale(1.15);
+  color: white;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  from {background-color: rgba(0, 0, 0, 0)}
+  to {background-color: rgba(0, 0, 0, 0.8)}
+}
