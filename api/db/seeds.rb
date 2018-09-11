@@ -12,3 +12,15 @@ forest = Sound.create(name: "forest", initial_color_value: "0,51,0")
 voice = Sound.create(name: "voice", initial_color_value: "64,64,64")
 river = Sound.create(name: "river", initial_color_value: "0,51,102")
 rain = Sound.create(name: "rain", initial_color_value: "192,192,192")
+
+vibe1 = Vibe.create(name: "chill")
+vibe2 = Vibe.create(name: "camp")
+vibe3 = Vibe.create(name: "rave")
+
+sound_vibe = SoundVibe.create(sound_id:fire.id, vibe_id: vibe1.id, volume: 0.10)
+sound_vib1 = SoundVibe.create(sound_id:rain.id, vibe_id: vibe1.id, volume: 0.80)
+sound_vib2 = SoundVibe.create(sound_id:ocean.id, vibe_id: vibe1.id, volume: 0.40)
+
+sound_vibe = SoundVibe.create(sound_id:forest.id, vibe_id: vibe2.id, volume: 0.10)
+sound_vib1 = SoundVibe.create(sound_id:rain.id, vibe_id: vibe2.id, volume: 0.80)
+sound_vib2 = SoundVibe.create(sound_id:river.id, vibe_id: vibe2.id, volume: 0.40)

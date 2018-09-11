@@ -18,6 +18,7 @@ const waterAudio = new Audio(`https://actions.google.com/sounds/v1/water/waves_c
 waterAudio.loop = true;
 waterAudio.onended = function(){
 waterAudio.play();
+waterAudio.setAttribute("data-id", "water")
 }
 let fireAudio = new Audio(`https://actions.google.com/sounds/v1/ambiences/fire.ogg`)
 
@@ -71,9 +72,14 @@ let slider = document.createElement("div")
 slider.classList.add("slide-bar")
 slider.innerHTML=`
 <input type="range" min="0" max="1" value="0" step="0.10" class="slider" id="myRange">`
-document.querySelector('body').append(slider)
+slider.setAttribute("data-id", slider.id)
 
 
+let waterDiv = document.createElement("div")
+document.querySelector("body").append(waterDiv)
+waterDiv.append(waterAudio,slider)
+
+document.add
 
 
 

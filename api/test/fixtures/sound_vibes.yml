@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sound_id=integer: MyString
+  vibe_id=integer: MyString
+  volume=integer: MyString
+
+two:
+  sound_id=integer: MyString
+  vibe_id=integer: MyString
+  volume=integer: MyString
