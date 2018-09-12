@@ -5,22 +5,16 @@ class Api::V1::VibesController < ApplicationController
  end
 
  def create
-   new_vibe = Vibe.new(vibe_params)
-   vibe_params[:sounds].each do |sound_data|
-     SoundVibe.create(sound_data, vibe_id: new_vibe.id)
+   new_vibe = Vibe.new(name: params[:name])
+     params[:sounds].each do |sound_data|
+       new_vibe.sound_vibes << SoundVibe.create(sound_id: sound_data[:sound_id], volume: sound_data[:volume])
    end
 
    if new_vibe.save
      render :json
    else
-     render :json{ errors: "Nononononono! Ce n'est pas vrais!"}
-   end   
- end
-
- private
-
- def vibe_params
-   params.permit(:vibe).require(:name,:sounds)
+     render :json[errors: "Nononononono! Ce n'est pas vrais!"]
+   end
  end
 
 end

@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Sound.delete_all
+
 
 ocean = Sound.create(name: "ocean", audio_file:"https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg", icon_image:"./water.jpg", initial_color_value: "0,51,51")
 

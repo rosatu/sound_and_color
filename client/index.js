@@ -1,32 +1,61 @@
 document.addEventListener("DOMContentLoaded",() => {
+  fetch("http://localhost:3000/api/v1/sounds")
+    .then(res => res.json())
+    .then(sounds => {sounds.forEach(
+      (sound) => { soundMaker(sound)
+      }
+    )})
+    .then(boom => {
+      let vibeBttn = document.createElement("button")
+      vibeBttn.setAttribute("id", "vibe-btn")
+      vibeBttn.innerText = "VIBE BUTTON"
+      document.querySelector('body').append(vibeBttn)
+    })
 
-let waterImage = new ImageCard("./water.jpg", `https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg
-`)
-document.querySelector('body').append(waterImage.render())
+  function soundMaker(sound){
+    let newSound = new ImageCard(sound.icon_image, sound.audio)
+    document.querySelector('body').append(newSound.render(sound.id))
+  }
 
-let fireImage = new ImageCard("./fire.jpg", `https://actions.google.com/sounds/v1/ambiences/fire.ogg`)
-document.querySelector('body').append(fireImage.render())
+  document.addEventListener("click", () => {
+    if (event.target.id === "vibe-btn"){
+      let vibeName = document.createElement("div")
+      vibeName.innerHTML = `<input value="name" id="name" type="text" ><br>
+      <input type="submit" id=submit value="submitVibe"><br>`
+      document.querySelector('body').append(vibeName)
+    }
+  })
 
-let tricklingstreamImage = new ImageCard("./tricklingstream.jpg", `https://actions.google.com/sounds/v1/water/small_stream_flowing.ogg`)
-document.querySelector('body').append(tricklingstreamImage.render())
+  document.addEventListener("click", () => {
+    if(event.target.id === "submit"){
+    fetch("http://localhost:3000/api/v1/vibes", {
+      method: "POST",
+      body: JSON.stringify({
+        name: document.getElementById("name").value,
+        sounds: vibeMaker()
+      }),
+      headers: { 'Accept': 'application/json',
+            'Content-Type': 'application/json'}
+    })
+    .then(r=>r.json())
+    .then(console.log)
+  }
 
-let nightcricketsImage = new ImageCard("./nightcrickets.jpg", `https://actions.google.com/sounds/v1/animals/afternoon_crickets_long.ogg`)
-document.querySelector('body').append(nightcricketsImage.render())
+  } )
 
-let thunderstormImage = new ImageCard("./thunderstorm.jpg", `https://actions.google.com/sounds/v1/weather/thunderstorm_long.ogg
-`)
-document.querySelector('body').append(thunderstormImage.render())
+  function vibeMaker(){
+    let slideBars = document.querySelectorAll('.slide-bar[data-id]');
+    let soundVibes = []
+    slideBars.forEach((bar) => {
+      soundVibes.push({sound_id: bar.getAttribute("data-id"), volume: bar.children[0].value})
+    })
+    return soundVibes;
+  }
 
-let chuckleImage = new ImageCard("./chuckle.jpg", `https://actions.google.com/sounds/v1/human_voices/male_chuckling.ogg`)
-document.querySelector('body').append(chuckleImage.render())
+  document.getElementById('modal-button').addEventListener('click', (e) => {
+    e.target.classList.add('hidden')
+    e.target.parentNode.classList.add('hidden')
+  })
 
-let gasImage = new ImageCard("./gas.jpg", `https://actions.google.com/sounds/v1/human_voices/human_fart.ogg`)
-document.querySelector('body').append(gasImage.render())
-
-document.getElementById('modal-button').addEventListener('click', (e) => {
-  e.target.classList.add('hidden')
-  e.target.parentNode.classList.add('hidden')
-})
-
-
+// ends document here
 })

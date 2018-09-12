@@ -1,0 +1,14 @@
+
+def create
+  new_vibe = Vibe.new(name: vibe_params[:name])
+
+  vibe_params[:sounds].each do |sound_data|
+    new_vibe.sound_vibes << SoundVibe.create(sound_data)
+  end
+
+  if new_vibe.save
+    render json: new_vibe
+  else
+    render json: { error: 'Failed to create new Vibe' }
+  end
+end
