@@ -11,10 +11,46 @@ document.addEventListener("DOMContentLoaded",() => {
       vibeBttn.innerText = "VIBE BUTTON"
       document.querySelector('body').append(vibeBttn)
     })
+  fetch("http://localhost:3000/api/v1/vibes")
+    .then(res => res.json())
+    .then(vibes => {
+      vibes.forEach((vibe) => {
+        let vibeBttn = document.createElement("button")
+        vibeBttn.setAttribute("vibe-id", vibe.id)
+        vibeBttn.innerText = vibe.name
+        document.querySelector('body').append(vibeBttn)
+      })
+    })
 
   function soundMaker(sound){
-    let newSound = new ImageCard(sound.icon_image, sound.audio)
+    console.log(sound.audio_file);
+    let newSound = new ImageCard(sound.icon_image, sound.audio_file)
     document.querySelector('body').append(newSound.render(sound.id))
+  }
+
+  document.addEventListener("click", () => {
+    let vibeId = event.target.getAttribute("vibe-id")
+    let sounds = []
+    if (event.target.getAttribute("vibe-id")){
+      fetch(`http://localhost:3000/api/v1/vibes/${vibeId}`)
+        .then(res => res.json())
+        .then(vibe => {
+          muteSongs()
+          vibe["sound_vibes"].forEach((sound) => {
+            // console.log(document.querySelector("div.slide-bar[data-id='`${sound.id}`']"));
+            console.log("sound id: " + `${sound.id}`)
+            let slider = document.querySelector("div.slide-bar[data-id=" + "'" + `${sound.id}`+ "'" + "]")
+          slider.querySelector("input").value =sound.volume
+        })})
+      return sounds
+    }
+  })
+
+  function muteSongs(){
+    sounds = document.querySelectorAll(".slide-bar[data-id]")
+    sounds.forEach((sound) => {
+      sound.querySelector("input").value = 0.0
+    })
   }
 
   document.addEventListener("click", () => {
@@ -28,26 +64,28 @@ document.addEventListener("DOMContentLoaded",() => {
 
   document.addEventListener("click", () => {
     if(event.target.id === "submit"){
-    fetch("http://localhost:3000/api/v1/vibes", {
-      method: "POST",
-      body: JSON.stringify({
-        name: document.getElementById("name").value,
-        sounds: vibeMaker()
-      }),
-      headers: { 'Accept': 'application/json',
-            'Content-Type': 'application/json'}
-    })
-    .then(r=>r.json())
-    .then(console.log)
-  }
-
-  } )
+    if(vibeMaker().length > 0){
+      fetch("http://localhost:3000/api/v1/vibes", {
+        method: "POST",
+        body: JSON.stringify({
+          name: document.getElementById("name").value,
+          sounds: vibeMaker()
+        }),
+        headers: { 'Accept': 'application/json',
+              'Content-Type': 'application/json'}
+      })
+      .then(r=>r.json())
+      }
+    }
+  })
 
   function vibeMaker(){
     let slideBars = document.querySelectorAll('.slide-bar[data-id]');
     let soundVibes = []
     slideBars.forEach((bar) => {
-      soundVibes.push({sound_id: bar.getAttribute("data-id"), volume: bar.children[0].value})
+      if (bar.children[0].value > 0){
+        soundVibes.push({sound_id: bar.getAttribute("data-id"), volume: bar.children[0].value})
+      }
     })
     return soundVibes;
   }
