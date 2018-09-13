@@ -6,6 +6,11 @@ class ImageCard {
     this.audioObject = audio
   }
 
+  changeVolume(number){
+    let audio = this.audioObject
+    audio.volume = number
+  }
+
   render(soundID){
     let fragment = document.createDocumentFragment()
     let image = document.createElement("img")
@@ -15,8 +20,10 @@ class ImageCard {
 
     let sliderContainer = document.createElement("div")
     sliderContainer.classList.add("slide-bar")
-    sliderContainer.innerHTML=`
-    <input type="range" min="0" max="1" value="0" step="0.10" class="slider" id="myRange">`
+    sliderContainer.innerHTML=`<input type="range" min="0" max="1" value="0" step="0.10" class="slider" id="myRange">`
+
+
+
     sliderContainer.setAttribute("data-id", soundID)
 
     fragment.append(image, sliderContainer)

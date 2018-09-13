@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded",() => {
     })
 
   function soundMaker(sound){
-    console.log(sound.audio_file);
     let newSound = new ImageCard(sound.icon_image, sound.audio_file)
     document.querySelector('body').append(newSound.render(sound.id))
   }
@@ -36,11 +35,21 @@ document.addEventListener("DOMContentLoaded",() => {
         .then(res => res.json())
         .then(vibe => {
           muteSongs()
+          console.log(vibe);
+          let i = 0
           vibe["sound_vibes"].forEach((sound) => {
             // console.log(document.querySelector("div.slide-bar[data-id='`${sound.id}`']"));
+            let audio = new Audio (vibe["sounds"][i]["audio_file"])
+            i++
             console.log("sound id: " + `${sound.id}`)
+            console.log(audio);
             let slider = document.querySelector("div.slide-bar[data-id=" + "'" + `${sound.id}`+ "'" + "]")
-          slider.querySelector("input").value =sound.volume
+
+
+            // audio.play()
+            // audio.volume() = sound.volume
+            slider.querySelector("input").value =sound.volume
+            console.log(slider.querySelector("input"));
         })})
       return sounds
     }

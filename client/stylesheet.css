@@ -3,9 +3,14 @@ body {
 }
 
 img {
-  margin: 10px
+  margin: 10px;
+  padding: 10px;
 }
 
+slide-bar{
+  margin: 10px;
+  padding: 10px;
+}
 .welcome-modal {
   position: absolute;
   background: rgba(0, 0, 0, 0.8);
