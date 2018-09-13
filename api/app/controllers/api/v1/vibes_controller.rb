@@ -17,4 +17,9 @@ class Api::V1::VibesController < ApplicationController
    end
  end
 
+ def show
+   @vibe = Vibe.find(params[:id])
+   render json: @vibe
+ end
+
 end
