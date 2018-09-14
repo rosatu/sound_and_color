@@ -19,10 +19,21 @@ img {
   animation-name: fadeIn;
   animation-duration: 3s;
 }
-
+#vibe-btn {
+  background: rgb(255,140,0);
+  border: 1px;
+  padding: 20px;
+  font-size: 2em;
+  font-weight: 400;
+  color: rgb(54.5,0,0);
+  text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
 .welcome-modal p {
   font-size: 3em;
-  color: white;
+  color: rgb(18, 140, 126);
 }
 
 .welcome-modal button {
@@ -44,6 +55,57 @@ img {
 .hidden {
   visibility: hidden;
 }
+
+.d-xl-inline-flex {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.wrapperindex {
+  display: grid;
+  grid-template-areas: "table table table table table" "table table table table table";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+/* HOVER COLOR */
+
+img svg:hover #alpha{
+  fill: #111;
+}
+
+/* GENERAL STYLES */
+
+body {
+  background-color: #bad0b8;
+  background-image: -webkit-linear-gradient(right, #FC7864, #FDA366);
+  background-image: -moz-linear-gradient(right, #FC7864, #FDA366);
+  background-image: -o-linear-gradient(right, #FC7864, #FDA366);
+  background-image: -ms-linear-gradient(right, #FC7864, #FDA366);
+  background-image: linear-gradient(right, #FC7864, #FDA366);
+}
+article {
+  width: 100%;
+  margin: 60px auto;
+  text-align: center;
+  zoom: 2;
+}
+a {
+  outline: none;
+  border: 0;
+  text-decoration: none;
+}
+img svg #alpha {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
 
 @keyframes fadeIn {
   from {background-color: rgba(0, 0, 0, 0)}

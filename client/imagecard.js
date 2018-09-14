@@ -7,7 +7,8 @@ class ImageCard {
   }
 
   render(soundID){
-    let fragment = document.createDocumentFragment()
+    let fragment = document.createElement("div")
+    fragment.classList.add("table")
     let image = document.createElement("img")
     image.src = this.imgfile
     image.width = 200

@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded",() => {
         let vibeBttn = document.createElement("button")
         vibeBttn.setAttribute("vibe-id", vibe.id)
         vibeBttn.innerText = vibe.name
-        document.querySelector('body').append(vibeBttn)
+        document.querySelector(".wrapperindex").append(vibeBttn)
       })
     })
 
   function soundMaker(sound){
-    console.log(sound.audio_file);
+
     let newSound = new ImageCard(sound.icon_image, sound.audio_file)
-    document.querySelector('body').append(newSound.render(sound.id))
+    document.querySelector('.wrapperindex').append(newSound.render(sound.id))
   }
 
   document.addEventListener("click", () => {
