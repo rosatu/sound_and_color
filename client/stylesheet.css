@@ -29,7 +29,7 @@ img {
   text-align: center;
   left: 0;
   right: 0;
-  position: absolute;
+  justify-content: center
 }
 .welcome-modal p {
   font-size: 3em;

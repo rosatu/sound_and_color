@@ -25,7 +25,11 @@ document.addEventListener("DOMContentLoaded",() => {
   function soundMaker(sound){
 
     let newSound = new ImageCard(sound.icon_image, sound.audio_file)
+    let audio = document.createElement("audio")
+    audio.innerHTML = `<source src=${sound.audio_file} type="audio/ogg">`
+    audio.dataset.id = sound.id
     document.querySelector('.wrapperindex').append(newSound.render(sound.id))
+    document.querySelector('body').append(audio)
   }
 
   document.addEventListener("click", () => {
@@ -37,20 +41,47 @@ document.addEventListener("DOMContentLoaded",() => {
         .then(vibe => {
           muteSongs()
           vibe["sound_vibes"].forEach((sound) => {
-            // console.log(document.querySelector("div.slide-bar[data-id='`${sound.id}`']"));
-            console.log("sound id: " + `${sound.id}`)
             let slider = document.querySelector("div.slide-bar[data-id=" + "'" + `${sound.id}`+ "'" + "]")
-          slider.querySelector("input").value =sound.volume
+          slider.querySelector("input").value = sound.volume
+          let audios = document.getElementsByTagName("audio")
+          let index = parseInt(slider.dataset.id) - 1
+
+        let button = document.createElement("button")
+        button.innerText = vibe.name
+        button.setAttribute("vibe-id", vibe.id)
+        button.addEventListener("click", (event) => {
+          console.log(audios.parentNode);
+            audios[index].volume = slider.value
+            audios[index].play()
+
+        })
         })})
       return sounds
     }
   })
 
+document.addEventListener("click", () => {
+  let boom = event.target.getAttribute("vibe-id")
+  console.log(boom);
+  if(event.target.getAttribute("vibe-id")){
+    fetch(`http://localhost:3000/api/v1/vibes/${boom}`)
+      .then(res => res.json())
+      .then(songs => {
+        songs.sound_vibes.forEach((song) => {
+          let audios = document.getElementsByTagName("audio")
+          let index = parseInt(song.id) - 1
+          audios[index].volume = song.volume
+          audios[index].play()
+        })
+      })
+  }
+})
   function muteSongs(){
-    sounds = document.querySelectorAll(".slide-bar[data-id]")
-    sounds.forEach((sound) => {
-      sound.querySelector("input").value = 0.0
-    })
+    let sounds = document.getElementsByTagName("audio")[0]
+    for (var i = 0; i < sounds.length; i++) {
+      sounds[i].volume = 0.0
+    };
+
   }
 
   document.addEventListener("click", () => {
@@ -90,10 +121,10 @@ document.addEventListener("DOMContentLoaded",() => {
     return soundVibes;
   }
 
-  document.getElementById('modal-button').addEventListener('click', (e) => {
-    e.target.classList.add('hidden')
-    e.target.parentNode.classList.add('hidden')
-  })
+  // document.getElementById('modal-button').addEventListener('click', (e) => {
+  //   e.target.classList.add('hidden')
+  //   e.target.parentNode.classList.add('hidden')
+  // })
 
 // ends document here
 })

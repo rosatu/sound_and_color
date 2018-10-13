@@ -22,10 +22,14 @@ class ImageCard {
 
     fragment.append(image, sliderContainer)
     let slider = sliderContainer.children[0]
-    let audio = this.audioObject
+    sliderContainer.dataset.id = soundID
+    slider.dataset.id = soundID
+    let audios = document.getElementsByTagName("audio")
+    let index = parseInt(slider.dataset.id) - 1
     slider.oninput = function(){
-      audio.play()
-      audio.volume = this.value
+      console.log(audios);
+      audios[index].play()
+      audios[index].volume = slider.value
     }
 
     return fragment
